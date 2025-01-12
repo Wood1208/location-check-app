@@ -8,7 +8,7 @@ const SettingsScreen = () => {
     <SafeAreaView>
       <View className="flex flex-col">
         <Header content="设置" className="ml-10"/>
-        <View className="ml-10 mt-2 w-5/6 h-[1px] bg-slate-600" />
+        <View className="ml-10 mt-2 w-5/6 h-[2px] bg-slate-600" />
         <View className="flex flex-col items-start w-full mt-5 ml-10">
           <SettingItem 
             heading="日志"

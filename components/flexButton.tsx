@@ -1,9 +1,9 @@
 import { Text, TouchableOpacity, View } from "react-native";
 
 interface FlexButtonProps {
-  ButtonIcon: JSX.Element;
+  ButtonIcon?: JSX.Element;
   heading: string;
-  content: string;
+  content?: string;
   clickHandler?: () => void;
   className?: string;
 }
@@ -27,9 +27,10 @@ const FlexButton = ({
         <Text className="text-2xl font-bold">
           {heading}
         </Text>
-        <Text className="text-xs font-normal">
+        {content && <Text className="text-xs font-normal">
           {content}
         </Text>
+        }
       </View>
     </TouchableOpacity>
   );

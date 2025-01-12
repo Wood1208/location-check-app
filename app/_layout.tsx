@@ -9,6 +9,13 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen 
+          name="(other)" 
+          options={{ 
+            headerShown: true,
+            title: "返回" 
+          }} 
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
     </GluestackUIProvider>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs } from "expo-router";
 import { StatusBar } from 'expo-status-bar';
+
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 const TabLayout = () => {

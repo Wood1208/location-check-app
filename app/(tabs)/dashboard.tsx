@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { router } from "expo-router";
 import { SafeAreaView, View } from "react-native"
 
+import Card from "@/components/card";
 import Header from "@/components/header";
 import FlexButton from "@/components/flexButton";
 import { Icon, LockIcon, MenuIcon, UnlockIcon } from "@/components/ui/icon";
 
+
 const BoardScreen = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleShowLocation = () => {
+    router.push('/locationList' as any);
+  }
 
   return (
     <SafeAreaView>
@@ -26,7 +33,9 @@ const BoardScreen = () => {
           ButtonIcon = {<Icon as={MenuIcon} color="black" className="w-8 h-8"/>}
           heading="配置"
           content="当前定位设置"
+          clickHandler={() => handleShowLocation()}
         />
+        <Card />
       </View>
     </SafeAreaView>
   );
